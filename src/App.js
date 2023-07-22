@@ -1,9 +1,10 @@
 import './App.css';
+import SubmitInputForm from './molecules/submitInputForm/SubmitInputForm'
 
 function App() {
   return (
     <div className="App">
-      <h1>Todo App</h1>
+      <SubmitInputForm />
     </div>
   );
 }

@@ -68,3 +68,72 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Expected Architecture
+src/
+  components/
+    atoms/
+      Button/
+        Button.js
+        Button.css
+        Button.test.js
+      ...
+    molecules/
+      ...
+    organisms/
+      ...
+  hooks/
+    useCustomHook1.js
+    useCustomHook2.js
+    ...
+  data/
+    api.js
+    constants.js
+    ...
+  context/
+    AuthContext.js
+    ThemeContext.js
+    ...
+  redux/
+    actions/
+      someAction.js
+      anotherAction.js
+      ...
+    reducers/
+      someReducer.js
+      anotherReducer.js
+      ...
+    store.js
+  routes/
+    AppRouter.js
+    PrivateRoute.js
+    ...
+  services/
+    authService.js
+    dataService.js
+    ...
+  styles/
+    globalStyles.css
+    theme.js
+    ...
+  assets/
+    images/
+      logo.png
+      ...
+    icons/
+      ...
+    fonts/
+      ...
+  tests/
+    ...
+  pages/
+    HomePage/
+      HomePage.js
+      HomePage.css
+      HomePage.test.js
+    AboutPage/
+      AboutPage.js
+      AboutPage.css
+      AboutPage.test.js
+    ...
