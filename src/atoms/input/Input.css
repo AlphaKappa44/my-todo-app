@@ -1,11 +1,7 @@
 .input-field {
-    padding: 8px;
+    background-color: black;
+    color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-  }
-  
-  .input-field:focus {
-    border-color: #007bff;
-    outline: none;
-  }
+}
