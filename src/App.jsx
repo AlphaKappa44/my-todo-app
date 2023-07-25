@@ -3,7 +3,7 @@ import './App.css';
 
 const App = () => {
     // This function is a lazy initializer for the state, 
-    // meaning it will only be called once when the component is initially rendered.
+    // it will only be called once when the component is initially rendered.
     const [tasks, setTasks] = useState(() => {
         // getting stored value
         const saved = localStorage.getItem("tasks");
@@ -28,11 +28,11 @@ const App = () => {
         }
     };
 
-    const handleDeleteTask = (index) => {
+    function handleDeleteTask(index) {
         const updatedTasks = [...tasks];
         updatedTasks.splice(index, 1);
         setTasks(updatedTasks);
-    };
+    }
 
     return (
         <div className="App">
