@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
+import Button from "./atoms/button/Button";
+import Input from "./atoms/input/Input";
 
 const App = () => {
     // This function is a lazy initializer for the state, 
@@ -9,7 +11,7 @@ const App = () => {
         const saved = localStorage.getItem("tasks");
         const initialValue = JSON.parse(saved);
         return initialValue || [];
-      });
+    });
     const [newTask, setNewTask] = useState("");
 
     // Save tasks to localStorage whenever tasks state changes
@@ -22,6 +24,8 @@ const App = () => {
     };
 
     const handleAddTask = () => {
+        // Removes white spaces from task 
+        // Prevents from adding empty New Tasks
         if (newTask.trim() !== "") {
             setTasks([...tasks, newTask]);
             setNewTask("");
@@ -38,20 +42,25 @@ const App = () => {
         <div className="App">
             <h1>Todo App</h1>
             <div>
-                <input
+
+                <Input
                     type="text"
                     value={newTask}
                     onChange={handleInputChange}
                     placeholder="Enter a new task..."
                 />
-                <button onClick={handleAddTask}>Add Task</button>
+
+                <Button onClick={handleAddTask}>
+                    Add Task
+                </Button>
+
             </div>
             <div >
                 <ul>
                     {tasks.map((task, index) => (
                         <li key={index}>
                             {task}{" "}
-                            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+                            <Button onClick={() => handleDeleteTask(index)}>Delete</Button>
                         </li>
                     ))}
                 </ul>

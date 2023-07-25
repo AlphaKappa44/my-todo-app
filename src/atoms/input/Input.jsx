@@ -1,13 +1,16 @@
-// import './Input.css';
+import './Input.css';
 
-// function Input() {
-//   return (
-//     <div className="input-field">
-//       <input 
-//       type="text"
-//       placeholder='Ajoutez un truc à faire ici ...' />
-//     </div>
-//   );
-// }
+import React from "react";
 
-// export default Input;
+const Input = ({ value, onChange, placeholder }) => {
+  return (
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+    />
+  );
+};
+
+export default Input;
