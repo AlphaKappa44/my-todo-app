@@ -16,8 +16,14 @@ const App = () => {
     }
   };
 
+  const handleDeleteTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    setTasks(updatedTasks);
+  };
+
   return (
-    <div style={{ textAlign: "center" }}>
+    <div className="App">
       <h1>Todo App</h1>
       <div>
         <input
@@ -28,11 +34,12 @@ const App = () => {
         />
         <button onClick={handleAddTask}>Add Task</button>
       </div>
-      <div style={{ marginTop: "20px", textAlign: "left" }}>
+      <div >
         <ul>
           {tasks.map((task, index) => (
             <li key={index}>
               {task}{" "}
+              <button onClick={() => handleDeleteTask(index)}>Delete</button>
             </li>
           ))}
         </ul>
