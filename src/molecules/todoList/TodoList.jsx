@@ -3,7 +3,7 @@ import React from "react";
 import Button from "../../atoms/button/Button";
 
 
-const TodoList = ( { tasks, setTasks }) => {
+const TodoList = ({ tasks, setTasks }) => {
 
     function handleDeleteTask(index) {
         const updatedTasks = [...tasks];
@@ -12,16 +12,20 @@ const TodoList = ( { tasks, setTasks }) => {
     }
 
     return (
-        <ul>
-        {tasks.map((task, index) => (
-            <li key={index}>
-                {task}{" "}
-                <Button onClick={() => handleDeleteTask(index)}>
-                    Delete
-                </Button>
-            </li>
-        ))}
-    </ul>
+            <ul>
+                {tasks.map((task, index) => (
+                    <li key={index}>
+                        {task}{" "}
+                        <Button
+                            dataTestId={`delete-button-${index}`}
+                            className="delete-button"
+                            onClick={() => handleDeleteTask(index)}
+                        >
+                            Delete
+                        </Button>
+                    </li>
+                ))}
+            </ul>
     );
 };
 
