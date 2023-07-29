@@ -31,7 +31,7 @@ test("handleDeleteTask is called with the correct index on Delete button click f
         expect(mockSetTasks).toHaveBeenLastCalledWith(expectedUpdatedTasks);
 
         // Log the HTML content after each click
-        console.log(screen.getByTestId(`delete-button-${index}`).innerHTML);
+        // console.log(screen.getByTestId("todo-list-container").innerHTML);
 
     });
 });
