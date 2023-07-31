@@ -6,6 +6,9 @@ import "./TodoList.css"
 
 const TodoList = ({ tasks, setTasks }) => {
 
+    // Reverse the tasks array to display the last todo on top
+    const reversedTasks = [...tasks].reverse();    
+
     function handleDeleteTask(index) {
         const updatedTasks = [...tasks];
         updatedTasks.splice(index, 1);
@@ -14,7 +17,7 @@ const TodoList = ({ tasks, setTasks }) => {
 
     return (
             <ul className="task-list">
-                {tasks.map((task, index) => (
+                {reversedTasks.map((task, index) => (
                     <li className="task-item"
                         key={index}>
                         {task}{" "}

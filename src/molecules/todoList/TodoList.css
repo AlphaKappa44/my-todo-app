@@ -2,6 +2,9 @@
     /* display: flex;
     border: 1px solid green; */
     list-style-type: none;
+    height: 50vh;
+    width: 40vw;
+    overflow-y: auto;
 }
 
 .task-item{
