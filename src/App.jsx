@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './App.css';
+import Title from "./atoms/title/Title";
 import TodoList from "./molecules/todoList/TodoList"
 import AddTodoForm from "./molecules/addTodoForm/AddTodoForm";
 
@@ -21,9 +22,9 @@ const App = () => {
 
     return (
         <div className="App">
-            <h1>Todo App</h1>
-            <div>
 
+            <div>
+                <Title />
                 <AddTodoForm tasks={tasks} setTasks={setTasks} />
 
             </div>

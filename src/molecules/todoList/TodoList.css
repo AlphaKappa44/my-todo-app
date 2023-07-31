@@ -1,0 +1,18 @@
+.task-list{
+    /* display: flex;
+    border: 1px solid green; */
+    list-style-type: none;
+}
+
+.task-item{
+    background-color: hsla(0, 0%, 0%, 0.03);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+    width: 25vw;
+    /* text-align: left; */
+    margin:1rem;
+    padding: .7rem;
+}
+

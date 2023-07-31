@@ -1,6 +1,7 @@
 // src/molecules/TodoList.js
 import React from "react";
 import Button from "../../atoms/button/Button";
+import "./TodoList.css"
 
 
 const TodoList = ({ tasks, setTasks }) => {
@@ -12,12 +13,14 @@ const TodoList = ({ tasks, setTasks }) => {
     }
 
     return (
-            <ul>
+            <ul className="task-list">
                 {tasks.map((task, index) => (
-                    <li key={index}>
+                    <li className="task-item"
+                        key={index}>
                         {task}{" "}
+
                         <Button
-                            dataTestId={`delete-button-${index}`}
+                            // dataTestId={`delete-button-${index}`}
                             className="delete-button"
                             onClick={() => handleDeleteTask(index)}
                         >
