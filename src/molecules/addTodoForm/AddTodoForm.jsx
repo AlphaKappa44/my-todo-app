@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Button from "../../atoms/button/Button";
 import Input from "../../atoms/input/Input";
+import "./AddTodoForm.css";
 
 const AddTodoForm = ({ tasks, setTasks }) => {
   const [newTask, setNewTask] = useState("");
@@ -20,7 +21,7 @@ const AddTodoForm = ({ tasks, setTasks }) => {
 };
 
   return (
-    <div>
+    <div className="add-todo-form">
       <Input
         type="text"
         value={newTask}

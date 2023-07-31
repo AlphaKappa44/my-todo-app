@@ -1,5 +1,10 @@
 .App {
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
   text-align: center;
   display: grid;
   place-items: center;
+
+  width: 70vw;
+  height: 70vh;
+
 }

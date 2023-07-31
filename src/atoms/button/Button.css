@@ -7,3 +7,9 @@
     background-color: black;
     color: white;
 }
+
+.delete-button {
+    background-color: blue;
+    width: 100px;
+    text-align: right;
+}

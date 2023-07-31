@@ -1,0 +1,7 @@
+.add-todo-form{
+    border: 1px solid hsla(0, 0%, 0%, 0.2);
+    background-color: hsla(0, 0%, 0%, 0.03);
+    width: 60vw;
+    margin:.5rem;
+    padding: .5rem;
+}
