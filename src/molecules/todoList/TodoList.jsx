@@ -22,14 +22,6 @@ const TodoList = ({ tasks, setTasks }) => {
                     key={index}>
                     {task}{" "}
 
-                    <button
-                        dataTestId={`delete-button-${index}`}
-                        className="delete-button"
-                        onClick={() => handleDeleteTask(index)}
-                    >
-                        <img className="delete-button" src="/noun-delete.png" alt="Delete Icon" />
-                    </button>
-
                     <Button
                         dataTestId={`delete-button-${index}`}
                         className="delete-button"
