@@ -1,19 +1,23 @@
 .task-list{
-    /* display: flex;
-    border: 1px solid green; */
+   display: flex;
+   flex-direction: column-reverse;
+   align-items: center;
+  /*    border: 1px solid green; */
     list-style-type: none;
-    height: 50vh;
-    width: 40vw;
-    overflow-y: auto;
+    height: 70vh;
+    width: 80vw;
+    overflow-y: scroll;
 }
+
 
 .task-item{
     background-color: hsla(0, 0%, 0%, 0.03);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     /* align-items: center; */
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
-    width: 25vw;
+    width: 70vw;
     /* text-align: left; */
     margin:1rem;
     padding: .7rem;
