@@ -6,7 +6,7 @@ import "./TodoList.css"
 
 const TodoList = ({ tasks, setTasks }) => {
 
-    // Reverse the tasks array to display the last todo on top
+    // Reverse the tasks array to display the last todo on top (deprecated)
     // const reversedTasks = [...tasks].reverse();
 
     function handleDeleteTask(index) {
