@@ -2,7 +2,7 @@ import './Input.css';
 
 import React from "react";
 
-const Input = ({ value, onChange, onKeyDown, placeholder }) => {
+const Input = ({ value, onChange, onKeyDown, placeholder, inputRef }) => {
     return (
         <input
             className='input-field'
@@ -11,6 +11,7 @@ const Input = ({ value, onChange, onKeyDown, placeholder }) => {
             onChange={onChange}
             onKeyDown={onKeyDown}
             placeholder={placeholder}
+            ref={inputRef} // Assign the ref to the input element
         />
     );
 };
